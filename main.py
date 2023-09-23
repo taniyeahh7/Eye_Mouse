@@ -35,7 +35,13 @@ while True:
             x=int(landmark.x*frame_w)#has x y and z
             y=int(landmark.y*frame_h)
             cv2.circle(frame,(x,y),3,(0,255,255))
-        print(left[0].y,left[1].y)
+        # print(left[0].y-left[1].y)
+        #if very close the eye is closed 
+        #0.002 or something means eye closed
+        if((left[0].y-left[1].y)):
+            # print('click')
+            pyautogui.click()
+            pyautogui.sleep(1)
     print(landmark_points)
     cv2.imshow("eye controlled mouse",frame)
     cv2.waitKey(1)

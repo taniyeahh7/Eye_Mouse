@@ -1,3 +1,3 @@
 # Eye_Mouse
 
-cursor movement with left eye and clicking with right 
+Python implementation of cursor movement with left eye and clicking with right 
